@@ -1,5 +1,5 @@
 - name: get the repo
-  git: repo=https://github.com/zalando/postgres-operator.git dest=/root/zalando-postgres-operator version=v1.2.0
+  git: repo=https://github.com/zalando/postgres-operator.git dest=/root/zalando-postgres-operator version=551564011139d5a6cb9f635d091b2b54f56f125d
 
 - name: apply manifests/configmap.yaml
   command: kubectl apply -f /root/zalando-postgres-operator/manifests/configmap.yaml
