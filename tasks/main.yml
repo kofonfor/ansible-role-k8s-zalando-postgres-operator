@@ -8,4 +8,4 @@
   command: kubectl apply -f /root/zalando-postgres-operator/manifests/operator-service-account-rbac.yaml
 
 - name: apply manifests/postgres-operator.yaml
-  shell: sed -e "s#image: registry.opensource.zalan.do/acid/postgres-operator:v1.2.0#image: registry.opensource.zalan.do/acid/postgres-operator:v1.2.0-15-gbb855fd-dirty#g" manifests/postgres-operator.yaml | kubectl apply -f -
+  shell: 'sed -e "s#image: registry.opensource.zalan.do/acid/postgres-operator:v1.2.0#image: registry.opensource.zalan.do/acid/postgres-operator:v1.2.0-15-gbb855fd-dirty#g" manifests/postgres-operator.yaml | kubectl apply -f -'
