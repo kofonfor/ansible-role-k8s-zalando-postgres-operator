@@ -2,10 +2,10 @@
   git: repo=https://github.com/zalando/postgres-operator.git dest=/root/zalando-postgres-operator version=v1.2.0
 
 - name: apply manifests/configmap.yaml
-  command: kubectl apply -f /root/zalando-postgres-operator/manifests/configmap.yaml -n {{ k8s_namespace }}
+  command: kubectl apply -f /root/zalando-postgres-operator/manifests/configmap.yaml
 
 - name: apply manifests/operator-service-account-rbac.yaml
-  command: kubectl apply -f /root/zalando-postgres-operator/manifests/operator-service-account-rbac.yaml -n {{ k8s_namespace }}
+  command: kubectl apply -f /root/zalando-postgres-operator/manifests/operator-service-account-rbac.yaml
 
 - name: apply manifests/postgres-operator.yaml
-  command: kubectl apply -f /root/zalando-postgres-operator/manifests/postgres-operator.yaml -n {{ k8s_namespace }}
+  command: kubectl apply -f /root/zalando-postgres-operator/manifests/postgres-operator.yaml
